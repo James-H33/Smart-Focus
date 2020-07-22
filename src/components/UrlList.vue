@@ -1,8 +1,8 @@
 <template>
   <div class="url-list">
-    <div class="url-list-item" v-for="z in values" :key="z.url">
-      <div class="label">{{z.url}}</div>
-      <div class="url-list-item-close" @click="removeUrl">
+    <div class="url-list-item" v-for="(item, i)  in values" :key="i">
+      <div class="label">{{item.url}}</div>
+      <div class="url-list-item-close" @click="removeUrl(i)">
         &times;
       </div>
     </div>
@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     removeUrl (index) {
-      const newList = this.urlList.filter((url, i) => i !== index)
+      const newList = this.urls.filter((url, i) => i !== index)
       this.updated(newList)
     }
   }
@@ -40,6 +40,10 @@ export default {
     grid-template-columns: 1fr 25px;
     justify-content: space-between;
     align-items: center;
+
+    &:hover {
+      background: #f5f5f5;
+    }
 
     .label {
       text-align: left;
