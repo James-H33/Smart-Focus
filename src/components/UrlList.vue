@@ -1,7 +1,7 @@
 <template>
   <div class="url-list">
-    <div class="url-list-item" v-for="(z, i)  in values" :key="z.url">
-      <div class="label">{{z.url}}</div>
+    <div class="url-list-item" v-for="(item, i)  in values" :key="i">
+      <div class="label">{{item.url}}</div>
       <div class="url-list-item-close" @click="removeUrl(i)">
         &times;
       </div>

@@ -19,7 +19,7 @@
 export default {
   name: 'SingleSelector',
   props: {
-    selected: String,
+    selected: [String, Number],
     label: String,
     values: Array,
     valueChanged: Function
