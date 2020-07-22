@@ -1,5 +1,6 @@
 <template>
   <input
+    class="input"
     type="text"
     :placeholder="placeholder"
     v-model="inputValue"
@@ -36,11 +37,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  input {
-    height: 50px;
+  .input {
+    width: calc(100% - 7px);
     font-size: 15px;
     border: 1px solid #000;
     border-radius: 6px;
     padding-left: 5px;
+    height: 50px;
   }
 </style>
